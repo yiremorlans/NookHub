@@ -1,0 +1,74 @@
+/******************************************
+/* CSS
+/*******************************************/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  background: #a3d9e6 url(https://animalcrossingworld.com/wp-content/uploads/2020/03/my-nintendo-wallpaper-animal-crossing-new-horizons-island-landscape.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.inputs {
+  text-align: center;
+}
+
+h1, h2 {
+  color: white;
+  margin-top: 80px;
+  text-align: center;
+  text-shadow: 1px 1px 2px darkorange;
+}
+h2 {
+  font-size: 3.0rem;
+}
+
+img{
+  display: block;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  
+}
+h3, h4{
+  color: lightseagreen;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 2px lightskyblue;
+  text-align: center;
+}
+
+input {
+   width: 80px;
+   padding: 4px;
+}
+button {
+ padding: 4px 8px;
+}
+
+.card {
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 10px;
+  max-width: 400px;
+  max-height: 300px;
+  border-radius: 30%;
+  border: 2px solid lightseagreen;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
