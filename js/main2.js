@@ -12,19 +12,16 @@ function getFetch(){
       .then(data => {
         if ( month === '' && day === '') {
           alert(`Please include month and day!`)
-        } else if (data.appearances === 'NH') {
-        // console.log(data)
-        // data.forEach(element => console.log(element.name))
-          let animal = new Villager(data[0])
-          animal.showVillager()
         } else {
-          let animal = new Villager(data[1])
+        console.log(data)
+          const animal = new Villager(data[0])
+          animal.checkNH()
           animal.showVillager()
         }
       })
 
       .catch(err => {
-          console.log(`error ${err}`)
+        alert(`Please use valid date. Ex: May 3`)
       });
 }
 
@@ -35,6 +32,7 @@ class Villager {
     this.image = villager.image_url
     this.phrase = villager.phrase
     this.personality = villager.personality
+    this.appearances = villager.appearances
   }
 
   showVillager() {
@@ -44,4 +42,14 @@ class Villager {
         document.querySelector('h3').innerText = `"Heya! What's new, ${this.phrase}?"`
     
   }
+
+  checkNH() {
+    for (const property of this.appearances) {
+      if (property.this.appearances.includes('NH')) {
+       this.showVillager()
+      }
+    }
+  }
+      
+
 }
