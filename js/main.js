@@ -14,14 +14,13 @@ function getFetch(){
           alert(`Please include month and day!`)
         } else {
         console.log(data)
-        // data.forEach(element => console.log(element.name))
           const animal = new Villager(data[0])
           animal.showVillager()
         }
       })
 
       .catch(err => {
-          console.log(`error ${err}`)
+        alert(`Please use valid date. Ex: May 3`)
       });
 }
 
