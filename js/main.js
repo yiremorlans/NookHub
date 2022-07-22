@@ -31,13 +31,14 @@ class Villager {
     this.image = villager.image_url
     this.phrase = villager.phrase
     this.personality = villager.personality
+    this.quote = villager.quote
   }
 
   showVillager() {
-        document.querySelector('h2').innerText = `" ${this.name} " the ${this.species}`
+        document.querySelector('h2').innerText = `${this.name}, the ${this.species}`
         document.querySelector('.villager').src = this.image
         document.querySelector('h4').innerText = `${this.personality} personality`
-        document.querySelector('h3').innerText = `"Heya! What's new, ${this.phrase}?"`
+        document.querySelector('h3').innerText = `" ${this.quote.slice(0,-1)}, ${this.phrase}. "`
     
   }
 }
