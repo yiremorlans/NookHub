@@ -13,8 +13,14 @@ function getFetch(){
         if ( month === '' && day === '') {
           alert(`Please include month and day!`)
         } else {
-        console.log(data)
-          const animal = new Villager(data[0])
+          let villager = {}
+            for (const item of data) {
+                if (item.appearances.includes('NH')){
+                  villager = item
+                  }
+            }
+            console.log(villager)
+          const animal = new Villager(villager)
           animal.showVillager()
         }
       })
@@ -23,6 +29,8 @@ function getFetch(){
         alert(`Please use valid date. Ex: May 3`)
       });
 }
+
+
 
 class Villager {
   constructor(villager) { //I am passing in data[0] to get image_url and other properties
@@ -33,6 +41,7 @@ class Villager {
     this.personality = villager.personality
     this.quote = villager.quote
   }
+
 
   showVillager() {
         document.querySelector('h2').innerText = `${this.name}, the ${this.species}`
