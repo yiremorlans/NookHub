@@ -13,7 +13,7 @@ The Nookipedia API docs offered plenty of useful information on query parameter 
 
 ## Optimizations
 
-Inputs were made larger and arranged to improve stlying of the components on the page. Previous fetch script included villagers all across Animal Crossing games, so an update was made to parse through New Horizons villagers only. Features I would like to incorporate in the future is a calender view of the villagers for each month. There is also possibility to include AC world specific features like fish, bugs, and events filtered by month or season.
+Inputs were made larger and arranged to improve styling of the components on the page. Previous fetch script included villagers all across Animal Crossing games, so an update was made to parse through New Horizons villagers only. Features I would like to incorporate in the future is a calender view of the villagers for each month. There is also possibility to include AC world specific features like fish, bugs, and events filtered by month or season.
 
 ## Lessons Learned:
 
