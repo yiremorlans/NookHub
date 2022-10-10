@@ -1,4 +1,4 @@
-# Animal Crossing Birthday Twin: New Horizons Edition
+# Nook & Cranny's Animal Crossing Birthday Twin: New Horizons Edition
 There are hundreds of villagers that can be discovered and invited to live on your own island in Animal Crossing New Horizons. What if you could find out what villager is your birthday twin? Simply input you or your friend's birthday to discover who the birthday twin is. Learn specific characteristics about the villager such as their name, species, personal catchphrase, and quote!
 
 **Link to project:** https://yiremorlans.github.io/ac-birthdaytwin/
