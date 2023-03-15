@@ -22,12 +22,8 @@ function App() {
     name: "Default",
     image: "",
   })
-  const [northFish, setNorthFish] = useState([])
-  const [southFish, setSouthFish] = useState([])
-  const [northBugs, setNorthBugs] = useState([])
-  const [southBugs, setSouthBugs] = useState([])
-
-  const getMonth = new Date().getMonth() + 1;
+  const [currentFish, setCurrentFish] = useState([])
+  const [currentBugs, setCurrentBugs] = useState([])
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -49,33 +45,17 @@ function App() {
     }
     fetchBday()
 
-    const fetchNorthFish = async () => {
+    const fetchFish = async () => {
       const response = await getFish()
-      const fishArr = response.filter(fish => fish.north.months_array.includes(getMonth));
-      setNorthFish(fishArr)
+      setCurrentFish(response)
     }
+    fetchFish()
 
-    fetchNorthFish()
-    const fetchSouthFish = async () => {
-      const response = await getFish()
-      const fishArr = response.filter(fish => fish.south.months_array.includes(getMonth));
-      setSouthFish(fishArr)
-    }
-    fetchSouthFish()
-
-    const fetchNorthBugs = async () => {
+    const fetchBugs = async () => {
       const response = await getBugs()
-      const bugsArr = response.filter(bug => bug.north.months_array.includes(getMonth));
-      setNorthBugs(bugsArr)
+      setCurrentBugs(response)
     }
-    fetchNorthBugs()
-
-    const fetchSouthBugs = async () => {
-      const response = await getBugs()
-      const bugsArr = response.filter(bug => bug.south.months_array.includes(getMonth));
-      setSouthBugs(bugsArr)
-    }
-    fetchSouthBugs()
+    fetchBugs()
   }, [])
 
   return (
@@ -83,7 +63,7 @@ function App() {
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
-        <VisitorCard icon={charIcons[2]} northFish={northFish} southFish={southFish} northBugs={northBugs} southBugs={southBugs}/>
+        <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
         <DailyBday villager={bdayData}/>
       </div>
       
