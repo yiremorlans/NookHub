@@ -10,6 +10,7 @@
     "predeploy" : "npm run build",
     "deploy" : "gh-pages -d build"
   },
+  "homepage": "https://yiremorlans.github.io/NookHub",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
