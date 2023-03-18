@@ -11,7 +11,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  background: url("/src/assets/villagers_wall.png") no-repeat;
+  background: url("/villagers_wall.png") no-repeat;
   background-size: cover;
 }
 

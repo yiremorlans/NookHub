@@ -13,7 +13,7 @@ const BdayTwin = () => {
         quote: "What's buzzin'?",
         phrase: "",
         species: "Dog",
-        image_url: "src/assets/kkslider.png",
+        image_url: "/kkslider.png",
     })
 
     async function handleSubmit(){
