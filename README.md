@@ -1,13 +1,13 @@
 # Nook & Cranny's Animal Crossing Birthday Twin: New Horizons Edition
 There are hundreds of villagers that can be discovered and invited to live on your own island in Animal Crossing New Horizons. What if you could find out what villager is your birthday twin? Simply input you or your friend's birthday to discover who the birthday twin is. Learn specific characteristics about the villager such as their name, species, personal catchphrase, and quote!
 
-**Link to project:** https://yiremorlans.github.io/ac-birthdaytwin/
+**Link to project:** TBA
 
 ![AC Birthday twin web app](https://github.com/yiremorlans/yiremorlans/blob/main/ac-twin.webp)
 
 ## How It's Made:
 
-**Tech used:** JavaScript, Nookipedia API, HTML, CSS, Postman
+**Tech used:** React, JavaScript, CSS, Nookipedia API
 
 The Nookipedia API docs offered plenty of useful information on query parameter uses and endpoints. I used Postman to assist with obtaining the specific properties and routing I wanted to incorporate into the fetch on the client side javascript. The fetch required a lot of parsing of information, so conditional logic was elaborated on the main.js file to hone in on specific villager details. Basic HTML and CSS components were added to show specific villager information on the page. Once the desired characteristics had their own components on the page, there was styling added to ensure a consistent theme across the page.
 
