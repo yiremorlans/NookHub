@@ -3,6 +3,8 @@ import Villager from "./Villager";
 import { useRef } from "react";
 import { useState } from "react";
 
+const kkslider = new URL('/kkslider.png', import.meta.url).href
+
 const BdayTwin = () => {
 
     const dateRef = useRef()
@@ -13,7 +15,7 @@ const BdayTwin = () => {
         quote: "What's buzzin'?",
         phrase: "",
         species: "Dog",
-        image_url: "/kkslider.png",
+        image_url: kkslider,
     })
 
     async function handleSubmit(){
