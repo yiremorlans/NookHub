@@ -60,6 +60,7 @@ See the [open issues](https://github.com/yiremorlans/NookHub/issues) for a full 
  - Use the Nookipedia API to filter all villager birthdays within the New Horizons expansion for a given month and year.
  - Use useRef hook over document.querySelector to get the user date input to make API call.
  - Use useState hook to store villager object to pass to Villager component for render.
+ - Review Vite documentation for static asset handling for troubleshooting issues in production environment (GitHub pages).
     
 ## Examples:
 Love everything Animal Crossing related? Check out my other AC themed web app!
