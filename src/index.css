@@ -1,7 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: "courier-prime", monospace;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "fira-sans", sans-serif;
   line-height: 1.5;
   color-scheme: light dark;
   background-color: #12b0a7;
@@ -11,13 +13,75 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  background: url("/villagers_wall.png") no-repeat;
-  background-size: cover;
+  background: url("assets/villagers_wall.png") repeat;
+  /* background-size: cover; */
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-width: 390px;
   min-height: 100vh;
+}
+
+.heading > h1 {
+  font-size: 2.8rem;
+  font-family: "courier-prime", monospace;
+  font-weight: 400;
+  align-self: self-end;
+}
+
+.header-container {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+header {
+  background: rgb(21, 176, 166);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 176, 166, 1) 38%,
+    rgba(184, 228, 220, 1) 100%
+  );
+  border: 3px dashed #eee8c8;
+  border-bottom: none;
+  border-radius: 20px;
+  color: #f5f7e1;
+  padding: 1rem;
+  width: fit-content;
+  margin-top: 3rem;
+  margin-right: 3rem;
+}
+
+.visitor-tab {
+  display: flex;
+  font-size: 1.5rem;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+/* NOOK HUB CONTAINER STARTS HERE */
+
+.hub-container {
+  position: relative;
+  color: #503b06;
+  width: auto;
+  height: 60vh;
+  padding: 2rem 1rem;
+  background-color: #ece5b9;
+  border: 3px solid #996433;
+  border-radius: 20px;
+  z-index: 1;
+  margin-top: -2rem;
+}
+
+.hub-container > img {
+  width: 20vw;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
 }
