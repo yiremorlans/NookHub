@@ -14,7 +14,7 @@
   -webkit-text-size-adjust: 100%;
 
   background: url("assets/villagers_wall.png") repeat;
-  /* background-size: cover; */
+  background-size: cover;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 }
 
 .heading > h1 {
-  font-size: 2.8rem;
+  /* font-size: 2.8rem; */
   font-family: "courier-prime", monospace;
   font-weight: 400;
   align-self: self-end;
@@ -50,13 +50,13 @@ header {
   color: #f5f7e1;
   padding: 1rem;
   width: fit-content;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   margin-right: 3rem;
 }
 
 .visitor-tab {
   display: flex;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
@@ -68,20 +68,15 @@ header {
 
 .hub-container {
   position: relative;
-  color: #503b06;
+  color: #996433;
   width: auto;
   height: 60vh;
-  padding: 2rem 1rem;
   background-color: #ece5b9;
   border: 3px solid #996433;
   border-radius: 20px;
   z-index: 1;
-  margin-top: -2rem;
 }
 
 .hub-container > img {
-  width: 20vw;
   position: absolute;
-  top: 1rem;
-  left: 2rem;
 }

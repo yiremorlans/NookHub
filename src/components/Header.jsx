@@ -33,12 +33,12 @@ const Header = () => {
   const localTime = formattedDate.split(' ').slice(3).join(' ');
 
     return (
-        <div className="header-container hidden md:flex">
-            <header>
-                <div className="heading">                    
+        <div className="header-container md:flex md:-mb-24">
+            <header className='hidden md:block'>
+                <div className="heading text-3xl lg:text-4xl xl:text-5xl">                    
                     <h1><FontAwesomeIcon icon={faMap} /> Daily Island Guide</h1>
                 </div>
-                <div className="visitor-tab">
+                <div className="visitor-tab text-lg xl:text-2xl">
                     <button onClick={() => setHemisphere(!hemisphere)}>
                         {hemisphere ? <FontAwesomeIcon icon={faEarthAmericas} /> : <FontAwesomeIcon icon={faEarthAfrica} />} 
                         {hemisphere ? ' North' : ' South'} hemisphere
