@@ -8,6 +8,7 @@ import { getEvents } from './api.js'
 import { getBirthday } from './api.js'
 import { getFish } from './api.js'
 import { getBugs } from './api.js'
+import { getSeaCritters } from './api.js'
 
 
 import isabelle from "./assets/isabelle.png";
@@ -24,6 +25,7 @@ function App() {
   })
   const [currentFish, setCurrentFish] = useState([])
   const [currentBugs, setCurrentBugs] = useState([])
+  const [currentSeaCritters, setCurrentSeaCritters] = useState([])
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -56,6 +58,11 @@ function App() {
       setCurrentBugs(response)
     }
     fetchBugs()
+
+    const fetchSeaCritters = async () => {
+      const response = await getSeaCritters()
+      setCurrentSeaCritters(response)
+    }
   }, [])
 
   return (
@@ -63,7 +70,7 @@ function App() {
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
-        <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
+        <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs} getSeaCritters={currentSeaCritters}/>
         <DailyBday villager={bdayData}/>
       </div>
       
