@@ -63,6 +63,7 @@ function App() {
       const response = await getSeaCritters()
       setCurrentSeaCritters(response)
     }
+    fetchSeaCritters()
   }, [])
 
   return (
