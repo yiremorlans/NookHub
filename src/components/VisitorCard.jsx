@@ -7,7 +7,7 @@ import DateTime from './DateTime'
 
 import "./VisitorCard.css"
 
-const VisitorCard = ({ icon, getFish, getBugs }) => {
+const VisitorCard = ({ icon, getFish, getBugs, getSeaCritters }) => {
 
     const [hemisphere, setHemisphere] = useState(true)
     const getMonth = new Date().getMonth() + 1;
@@ -38,7 +38,9 @@ const VisitorCard = ({ icon, getFish, getBugs }) => {
                 <CritterCard critterType="Bugs" fauna={hemisphere ? 
                     getBugs.filter(bug => bug.north.months_array.includes(getMonth)) : 
                     getBugs.filter(bug => bug.south.months_array.includes(getMonth))} />
-
+                <CritterCard critterType="Sea Critters" fauna={hemisphere ?
+                    getSeaCritters.filter(seaCritter => seaCritter.north.months_array.includes(getMonth)) :
+                    getSeaCritters.filter(seaCritter => seaCritter.south.months_array.includes(getMonth))} />
             </div>
         </div>
     )
