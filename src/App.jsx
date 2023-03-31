@@ -61,12 +61,15 @@ function App() {
   return (
     <>
       <Navigation />
-      <div className="card-container grid md:grid-cols-2 md:gap-7">
-        <NookCard icon={charIcons[0]} props={eventData}/>
-        <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
-        <DailyBday villager={bdayData}/>
+      <div className="card-container flex flex-wrap h-full">
+        <div className="flex flex-col w-full md:w-1/2 gap-7 p-4">
+          <NookCard className="w-96" icon={charIcons[0]} props={eventData}/>
+          <DailyBday villager={bdayData}/>
+        </div>
+        <div className="flex flex-col w-full md:w-1/2 gap-7 p-4">
+          <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
+        </div>
       </div>
-      
     </>
   )
 }

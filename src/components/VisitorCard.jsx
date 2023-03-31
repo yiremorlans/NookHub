@@ -38,7 +38,6 @@ const VisitorCard = ({ icon, getFish, getBugs }) => {
                 <CritterCard critterType="Bugs" fauna={hemisphere ? 
                     getBugs.filter(bug => bug.north.months_array.includes(getMonth)) : 
                     getBugs.filter(bug => bug.south.months_array.includes(getMonth))} />
-
             </div>
         </div>
     )
