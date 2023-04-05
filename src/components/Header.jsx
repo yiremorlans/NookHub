@@ -3,7 +3,6 @@ import { faCalendarDays } from '@fortawesome/free-solid-svg-icons'
 import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faEarthAfrica } from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
-import { faMap } from '@fortawesome/free-regular-svg-icons'
 import React, { useState, useEffect } from 'react';
 
 // const acLeaf = new URL('../assets/nook_leaf.png', import.meta.url).href
@@ -35,9 +34,9 @@ const Header = () => {
     return (
         <div className="header-container -mb-24 mr-3 sm:flex sm:mr-8">
             <header>
-                <div className="heading hidden sm:flex sm:text-2xl
+                <div className="heading sm:flex sm:text-2xl
                 md:text-3xl lg:text-4xl xl:text-5xl">                    
-                    <h1><FontAwesomeIcon icon={faMap} /> Nook Hub Island Guide</h1>
+                    <h1>NOOK</h1>
                 </div>
                 <div className="visitor-tab text-base space-x-2 sm:text-lg xl:text-2xl">
                     <button onClick={() => setHemisphere(!hemisphere)}>

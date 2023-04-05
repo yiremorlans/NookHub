@@ -1,4 +1,5 @@
 import NavButton from "./NavButton"
+import "./Navigation.css"
 import { faHouseChimney } from "@fortawesome/free-solid-svg-icons"
 import { faCalendarCheck } from "@fortawesome/free-regular-svg-icons"
 import { faGlasses } from "@fortawesome/free-solid-svg-icons"

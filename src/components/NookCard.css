@@ -1,0 +1,25 @@
+.nook-card {
+  width: 100%;
+  height: 30vh;
+  padding: 1.25rem;
+  background-color: #f4fbeb;
+  border-radius: 26px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
+}
+
+.feat-title {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #384e53;
+}
+
+.feat-title > img {
+  width: auto;
+  height: 10vh;
+}
+.heading > h1 {
+  font-family: "courier-prime", monospace;
+  font-weight: 400;
+}
