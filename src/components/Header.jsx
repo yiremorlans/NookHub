@@ -5,10 +5,6 @@ import { faEarthAfrica } from '@fortawesome/free-solid-svg-icons'
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 import React, { useState, useEffect } from 'react';
 
-// const acLeaf = new URL('../assets/nook_leaf.png', import.meta.url).href
-
-
-
 const Header = () => {
 
     const [hemisphere, setHemisphere] = useState(true)

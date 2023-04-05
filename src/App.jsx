@@ -9,11 +9,11 @@ import nookling from "./assets/nookling.png";
 import player from "./assets/player.png";
 
 import './App.css'
+import { DailyBday } from './components/DailyBday';
 
 function App() {
   
   const charIcons = [isabelle, nookling, player];
-
   const [eventData, setEventData] = useState([])
 
   useEffect(() => {
@@ -29,6 +29,7 @@ function App() {
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
+        <DailyBday />
       </div>
       
     </>

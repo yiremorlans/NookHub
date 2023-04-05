@@ -1,8 +1,6 @@
 import "./NookCard.css"
 
 const NookCard = ({icon, props }) => {
-
-    console.log(icon, props)
     return (
         <div className="nook-card">
             <div className="feat-title">
