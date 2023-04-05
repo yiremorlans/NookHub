@@ -10,14 +10,3 @@
   padding: 0.2rem;
   margin-right: 0.5em;
 }
-
-.bday-card {
-  width: 100%;
-  margin: auto;
-}
-
-.bday-card > img {
-  padding: 1rem;
-  max-width: 20vw;
-  height: 100%;
-}

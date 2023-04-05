@@ -1,10 +1,12 @@
 import "./DailyBday.css"
 
-export const DailyBday = () => {
-
+const DailyBday = ({ villager }) => {
     return (
         <div className="bday-card">
-            <h3>Daily Bday</h3>
+            <img src={villager.image} alt={villager.name} />
+            <h3>{villager.name}'s Birthday</h3>
         </div>
     )
 }
+
+export default DailyBday

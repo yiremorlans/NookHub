@@ -1,6 +1,6 @@
 .nook-card {
   width: 100%;
-  height: 30vh;
+  height: 26vh;
   padding: 1.25rem;
   background-color: #fdfdf2;
   border-radius: 26px;
@@ -18,9 +18,8 @@
 
 .feat-title > img {
   width: auto;
-  height: 10vh;
 }
 
-h3 {
+.feat-title > h3 {
   padding-left: 1rem;
 }
