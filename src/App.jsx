@@ -11,6 +11,7 @@ import nookling from "./assets/nookling.png";
 import player from "./assets/player.png";
 
 import './App.css'
+import VisitorCard from './components/VisitorCard';
 
 function App() {
   
@@ -41,11 +42,13 @@ function App() {
     }
     fetchBday()
   }, [])
+
   return (
     <>
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
+        <VisitorCard icon={charIcons[2]}/>
         <DailyBday villager={bdayData}/>
       </div>
       

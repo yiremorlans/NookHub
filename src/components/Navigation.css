@@ -7,6 +7,7 @@
   position: fixed;
   width: auto;
   height: auto;
+  padding: 0.35rem;
   background-color: #f5fdfc;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px;
   border-radius: 40px;
@@ -24,7 +25,6 @@ ul {
   font-weight: 400;
   flex-flow: column nowrap;
   gap: 3rem;
-  padding: 0.25rem;
   color: #9da7a7;
   font-weight: 400;
 }
