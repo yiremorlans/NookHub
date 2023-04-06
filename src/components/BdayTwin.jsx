@@ -2,8 +2,7 @@ import Villager from "./Villager";
 
 import { useRef } from "react";
 import { useState } from "react";
-
-const kkslider = new URL('/kkslider.png', import.meta.url).href
+import kkslider from "../assets/kkslider.png";
 
 const BdayTwin = () => {
 
@@ -29,8 +28,6 @@ const BdayTwin = () => {
 
         const response = await fetch(apiUrl) 
         const data = await response.json()
-        console.log(data)
-
         data.map(villager => {
             if (villager.appearances.includes("NH")) {
                 setVillager({

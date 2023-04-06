@@ -1,23 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: "courier-prime", monospace;
-  font-weight: 400;
-  font-style: normal;
   line-height: 1.5;
   color-scheme: light dark;
-  background-color: #12b0a7;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  background: url("/villagers_wall.png") no-repeat;
+  background: url("assets/villagers_wall.png"), rgba(240, 253, 251, 100);
+  background-attachment: fixed;
   background-size: cover;
+  box-shadow: inset 0 0 0 100vh rgba(240, 253, 251, 0.7);
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
+  position: relative;
+  margin: 0 auto;
+  min-width: 390px;
   min-height: 100vh;
+}
+
+.card-container {
+  position: absolute;
+  right: 0;
+  width: 90vw;
+  padding: 2rem;
+  padding-left: 0rem;
+  color: #384e53;
+}
+
+.header-container {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+header {
+  background: rgb(21, 176, 166);
+  background: linear-gradient(
+    180deg,
+    rgba(21, 176, 166, 1) 30%,
+    rgba(184, 228, 220, 1) 100%
+  );
+  border: 3px dashed #eee8c8;
+  border-bottom: none;
+  border-radius: 20px;
+  color: #f5f7e1;
+  padding: 1rem;
+  width: fit-content;
+}
+
+.visitor-tab {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+  z-index: 2;
 }

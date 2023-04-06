@@ -39,12 +39,12 @@ This project was created with Vite. To get the project running on your local mac
 ## Roadmap
 
 - [x] Improve original birthday twin module
-- [ ] Improve layout to accomodate more features
+- [x] Improve layout to accomodate more features
 - [ ] Integrate Nook Hub header with user local information
     - [ ] Northern/Southern hemisphere selection tab
     - [ ] Current date and time
 - [ ] Nook Shopping seasonal event items available module
-- [ ] Villager birthday module
+- [x] Villager birthday module
 - [ ] Critter availability module for:
     - [ ] Fish
     - [ ] Bugs
