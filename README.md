@@ -38,8 +38,8 @@ This project was created with Vite. To get the project running on your local mac
 
 ## Roadmap
 
-- [x] Improve original birthday twin module
-- [x] Improve layout to accomodate more features
+- [x] Improve the original birthday twin module
+- [x] Improve layout to accommodate more features
 - [ ] Integrate Nook Hub header with user local information
     - [ ] Northern/Southern hemisphere selection tab
     - [ ] Current date and time
