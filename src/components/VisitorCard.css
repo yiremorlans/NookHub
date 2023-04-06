@@ -24,7 +24,7 @@
   align-items: left;
   padding-left: 1rem;
 }
-.visitor-title > h3 {
+.visitor-title > h2 {
   font-size: 1.5rem;
   font-family: "fira-sans", sans-serif;
   font-weight: 400;
@@ -45,4 +45,32 @@ hr {
   width: 100%;
   margin: 0 auto;
   border: 2px solid #fdfdf2;
+}
+
+.visitor-info {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  font-family: "fira-sans", sans-serif;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.daily-update {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.daily-update > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.daily-update > span {
+  font-family: "fira-sans", sans-serif;
+  font-size: 1.5rem;
+  padding-right: 0.5rem;
 }
