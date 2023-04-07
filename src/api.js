@@ -38,3 +38,12 @@ export const getBirthday = async () => {
   const currentBday = await response.json();
   return currentBday;
 };
+
+// FETCH CURRENT FISH
+export const getFish = async () => {
+  const response = await fetch(
+    `https://api.nookipedia.com/nh/fish?api_key=e4bd58d8-da13-4aa1-a208-dba6f628e4be`
+  );
+  const currentFish = await response.json();
+  return currentFish;
+};
