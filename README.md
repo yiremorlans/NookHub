@@ -40,13 +40,13 @@ This project was created with Vite. To get the project running on your local mac
 
 - [x] Improve the original birthday twin module
 - [x] Improve layout to accommodate more features
-- [ ] Integrate Nook Hub header with user local information
-    - [ ] Northern/Southern hemisphere selection tab
-    - [ ] Current date and time
+- [x] Integrate Nook Hub header with user local information
+    - [x] Northern/Southern hemisphere selection tab
+    - [x] Current date and time
 - [ ] Nook Shopping seasonal event items available module
 - [x] Villager birthday module
 - [ ] Critter availability module for:
-    - [ ] Fish
+    - [x] Fish
     - [ ] Bugs
     - [ ] Sea Creatures
 
