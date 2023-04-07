@@ -20,7 +20,7 @@
   padding: 1rem 0;
 }
 
-ul {
+.hub-nav > ul {
   display: flex;
   font-weight: 400;
   flex-flow: column nowrap;
@@ -29,14 +29,14 @@ ul {
   font-weight: 400;
 }
 
-ul > li {
+.hub-nav > ul > li {
   margin: auto;
   font-family: "fira-sans", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-ul > li:first-child {
+.hub-nav > ul > li:first-child {
   background-color: #8ddac1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 10px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
@@ -44,7 +44,7 @@ ul > li:first-child {
   color: #fefefe;
 }
 
-ul > li:active {
+.hub-nav > ul > li:active {
   background-color: #8ddac1;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 2px 10px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;

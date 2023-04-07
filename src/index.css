@@ -33,33 +33,3 @@ body {
   padding-left: 0rem;
   color: #384e53;
 }
-
-.header-container {
-  display: flex;
-  position: relative;
-  justify-content: flex-end;
-}
-
-header {
-  background: rgb(21, 176, 166);
-  background: linear-gradient(
-    180deg,
-    rgba(21, 176, 166, 1) 30%,
-    rgba(184, 228, 220, 1) 100%
-  );
-  border: 3px dashed #eee8c8;
-  border-bottom: none;
-  border-radius: 20px;
-  color: #f5f7e1;
-  padding: 1rem;
-  width: fit-content;
-}
-
-.visitor-tab {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 2rem;
-  z-index: 2;
-}

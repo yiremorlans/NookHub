@@ -59,9 +59,9 @@ hr {
 
 .daily-update {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  padding: 1rem;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: 2rem;
 }
 
 .daily-update > h3 {
@@ -69,8 +69,16 @@ hr {
   font-weight: 700;
 }
 
-.daily-update > span {
-  font-family: "fira-sans", sans-serif;
-  font-size: 1.5rem;
-  padding-right: 0.5rem;
+.daily-critter {
+  font-family: "firea-sans", sans-serif;
+  font-weight: 700;
+}
+
+.daily-critter > ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.daily-critter > ul > li > img {
+  width: 40%;
 }

@@ -6,12 +6,12 @@ import VisitorCard from './components/VisitorCard';
 import { useState, useEffect } from 'react'
 import { getEvents } from './api.js'
 import { getBirthday } from './api.js'
+import { getFish } from './api.js'
+
 
 import isabelle from "./assets/isabelle.png";
 import nookling from "./assets/nookling.png";
 import player from "./assets/player.png";
-
-import './App.css'
 
 function App() {
   
@@ -21,6 +21,10 @@ function App() {
     name: "Default",
     image: "",
   })
+  const [northFish, setNorthFish] = useState([])
+  const [southFish, setSouthFish] = useState([])
+
+  const getMonth = new Date().getMonth() + 1;
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -41,6 +45,20 @@ function App() {
      })
     }
     fetchBday()
+
+    const fetchNorthFish = async () => {
+      const response = await getFish()
+      const fishArr = response.filter(fish => fish.north.months_array.includes(getMonth));
+      setNorthFish(fishArr)
+    }
+
+    fetchNorthFish()
+    const fetchSouthFish = async () => {
+      const response = await getFish()
+      const fishArr = response.filter(fish => fish.south.months_array.includes(getMonth));
+      setSouthFish(fishArr)
+    }
+    fetchSouthFish()
   }, [])
 
   return (
@@ -48,7 +66,7 @@ function App() {
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
-        <VisitorCard icon={charIcons[2]}/>
+        <VisitorCard icon={charIcons[2]} northFish={northFish} southFish={southFish}/>
         <DailyBday villager={bdayData}/>
       </div>
       
