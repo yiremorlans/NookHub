@@ -40,7 +40,7 @@ const VisitorCard = ({ icon }) => {
                 <div className="visitor-info">
                     <button onClick={() => setHemisphere(!hemisphere)}>
                         {hemisphere ? <FontAwesomeIcon icon={faEarthAmericas} /> : <FontAwesomeIcon icon={faEarthAfrica} />} 
-                        {hemisphere ? ' North' : ' South'} hemisphere
+                        {hemisphere ? ' north' : ' south'} hemisphere
                     </button>
                     <span><FontAwesomeIcon icon={faCalendarDays} /> {monthDate}</span>
                 </div>
