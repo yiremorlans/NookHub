@@ -1,9 +1,10 @@
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEarthAmericas } from '@fortawesome/free-solid-svg-icons'
 import { faEarthAfrica } from '@fortawesome/free-solid-svg-icons'
 import CritterCard from './CritterCard'
 import DateTime from './DateTime'
-import React, { useState, useEffect } from 'react';
+
 
 import "./VisitorCard.css"
 
@@ -30,7 +31,7 @@ const VisitorCard = ({ icon, northFish, southFish }) => {
             </div>
             <div className="daily-update">
                 <h3>Daily Update</h3>
-                <CritterCard hemisphere={hemisphere} northFish={northFish} southFish={southFish} />
+                <CritterCard critterType="Fish" hemisphere={hemisphere} northFauna={northFish} southFauna={southFish} />
             </div>
         </div>
     )
