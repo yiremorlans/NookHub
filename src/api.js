@@ -47,3 +47,12 @@ export const getFish = async () => {
   const currentFish = await response.json();
   return currentFish;
 };
+
+// FETCH CURRENT BUGS
+export const getBugs = async () => {
+  const response = await fetch(
+    `https://api.nookipedia.com/nh/bugs?api_key=e4bd58d8-da13-4aa1-a208-dba6f628e4be`
+  );
+  const currentBugs = await response.json();
+  return currentBugs;
+};

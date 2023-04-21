@@ -5,12 +5,13 @@ import { faEarthAfrica } from '@fortawesome/free-solid-svg-icons'
 import CritterCard from './CritterCard'
 import DateTime from './DateTime'
 
-
 import "./VisitorCard.css"
 
-const VisitorCard = ({ icon, northFish, southFish }) => {
+const VisitorCard = ({ icon, getFish, getBugs }) => {
 
     const [hemisphere, setHemisphere] = useState(true)
+    const getMonth = new Date().getMonth() + 1;
+
 
     return (
         <div className="visitor-card">
@@ -31,7 +32,13 @@ const VisitorCard = ({ icon, northFish, southFish }) => {
             </div>
             <div className="daily-update">
                 <h3>Daily Update</h3>
-                <CritterCard critterType="Fish" hemisphere={hemisphere} northFauna={northFish} southFauna={southFish} />
+                <CritterCard critterType="Fish" fauna={hemisphere ?
+                    getFish.filter(fish => fish.north.months_array.includes(getMonth)) :
+                    getFish.filter(fish => fish.south.months_array.includes(getMonth))}/>
+                <CritterCard critterType="Bugs" fauna={hemisphere ? 
+                    getBugs.filter(bug => bug.north.months_array.includes(getMonth)) : 
+                    getBugs.filter(bug => bug.south.months_array.includes(getMonth))} />
+
             </div>
         </div>
     )

@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import { getEvents } from './api.js'
 import { getBirthday } from './api.js'
 import { getFish } from './api.js'
+import { getBugs } from './api.js'
 
 
 import isabelle from "./assets/isabelle.png";
@@ -21,10 +22,8 @@ function App() {
     name: "Default",
     image: "",
   })
-  const [northFish, setNorthFish] = useState([])
-  const [southFish, setSouthFish] = useState([])
-
-  const getMonth = new Date().getMonth() + 1;
+  const [currentFish, setCurrentFish] = useState([])
+  const [currentBugs, setCurrentBugs] = useState([])
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -46,19 +45,17 @@ function App() {
     }
     fetchBday()
 
-    const fetchNorthFish = async () => {
+    const fetchFish = async () => {
       const response = await getFish()
-      const fishArr = response.filter(fish => fish.north.months_array.includes(getMonth));
-      setNorthFish(fishArr)
+      setCurrentFish(response)
     }
+    fetchFish()
 
-    fetchNorthFish()
-    const fetchSouthFish = async () => {
-      const response = await getFish()
-      const fishArr = response.filter(fish => fish.south.months_array.includes(getMonth));
-      setSouthFish(fishArr)
+    const fetchBugs = async () => {
+      const response = await getBugs()
+      setCurrentBugs(response)
     }
-    fetchSouthFish()
+    fetchBugs()
   }, [])
 
   return (
@@ -66,7 +63,7 @@ function App() {
       <Navigation />
       <div className="card-container grid md:grid-cols-2 md:gap-7">
         <NookCard icon={charIcons[0]} props={eventData}/>
-        <VisitorCard icon={charIcons[2]} northFish={northFish} southFish={southFish}/>
+        <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
         <DailyBday villager={bdayData}/>
       </div>
       

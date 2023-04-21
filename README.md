@@ -47,7 +47,7 @@ This project was created with Vite. To get the project running on your local mac
 - [x] Villager birthday module
 - [ ] Critter availability module for:
     - [x] Fish
-    - [ ] Bugs
+    - [x] Bugs
     - [ ] Sea Creatures
 
 See the [open issues](https://github.com/yiremorlans/NookHub/issues) for a full list of proposed features (and known issues).
