@@ -56,3 +56,12 @@ export const getBugs = async () => {
   const currentBugs = await response.json();
   return currentBugs;
 };
+
+// FETCH CURRENT SEA CRITTERS
+export const getSeaCritters = async () => {
+  const response = await fetch(
+    `https://api.nookipedia.com/nh/sea?api_key=e4bd58d8-da13-4aa1-a208-dba6f628e4be`
+  );
+  const currentSeaCritters = await response.json();
+  return currentSeaCritters;
+};
