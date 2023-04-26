@@ -8,6 +8,7 @@ import { getEvents } from './api.js'
 import { getBirthday } from './api.js'
 import { getFish } from './api.js'
 import { getBugs } from './api.js'
+import { getSeaCritters } from './api.js'
 
 
 import isabelle from "./assets/isabelle.png";
@@ -24,6 +25,7 @@ function App() {
   })
   const [currentFish, setCurrentFish] = useState([])
   const [currentBugs, setCurrentBugs] = useState([])
+  const [currentSeaCritters, setCurrentSeaCritters] = useState([])
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -56,6 +58,12 @@ function App() {
       setCurrentBugs(response)
     }
     fetchBugs()
+
+    const fetchSeaCritters = async () => {
+      const response = await getSeaCritters()
+      setCurrentSeaCritters(response)
+    }
+    fetchSeaCritters()
   }, [])
 
   return (
@@ -67,7 +75,7 @@ function App() {
           <DailyBday villager={bdayData}/>
         </div>
         <div className="flex flex-col w-full md:w-1/2 gap-7 p-4">
-          <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs}/>
+          <VisitorCard icon={charIcons[2]} getFish={currentFish} getBugs={currentBugs} getSeaCritters={currentSeaCritters}/>
         </div>
       </div>
     </>
